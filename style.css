@@ -1,0 +1,139 @@
+body {
+  background-color: #ffe7db;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  background-color: #255d83;
+  padding: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+h4 {
+  text-align: left;
+  text-indent: 5%;
+  font-weight: normal;
+}
+
+p {
+  text-align: left;
+  font-size: 14px;
+}
+
+help:hover {
+  cursor: pointer;
+}
+#header {
+  background-color: #735983;
+  color: #ffe7db;
+  text-align: center;
+}
+
+#container {
+  background-color: #ffe7db;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content {
+  position: relative;
+  padding: 0px;
+}
+
+#root {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer {
+  margin: 0;
+  padding: 0;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 20px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff0e8;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 960px;
+  height: 560px;
+}
+
+.modal nextbutton {
+  color: white;
+  background-color: #255d83;
+  position: relative;
+  padding-top: 6px;
+  float: right;
+  margin: auto;
+  width: 70px;
+  height: 25px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.modal prevbutton {
+  color: white;
+  background-color: #255d83;
+  position: relative;
+  padding-top: 6px;
+  float: left;
+  margin: auto;
+  width: 70px;
+  height: 25px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.modal nextbutton:hover,
+prevbutton:hover {
+  background-color: #1c425c;
+  cursor: pointer;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

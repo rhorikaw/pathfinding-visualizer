@@ -1,0 +1,398 @@
+.node {
+  width: 27.5px;
+  height: 27.5px;
+  outline: 0.5px solid grey;
+  display: inline-block;
+}
+
+.node-visited {
+  animation-name: visitedNode;
+  animation-duration: 1.25s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes visitedNode {
+  0% {
+    transform: scale(0.5);
+    background-color: lightblue;
+    border-radius: 100%;
+  }
+  25% {
+    background-color: rgb(85, 175, 175);
+  }
+  50% {
+    transform: scale(1.25);
+    background-color: lightskyblue;
+  }
+  75% {
+    background-color: rgba(0, 128, 128, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    background-color: rgba(0, 0, 128, 0.7);
+  }
+}
+
+.node-path {
+  animation-name: shortestPath;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes shortestPath {
+  0% {
+    transform: scale(0.9);
+    background-color: lightpink;
+  }
+  50% {
+    transform: scale(1.25);
+    background-color: magenta;
+  }
+  100% {
+    transform: scale(1);
+    background-color: salmon;
+  }
+}
+
+.node-finish {
+  background-color: greenyellow;
+}
+
+.node-start {
+  background-color: red;
+}
+
+.node-wall {
+  animation-name: wallNode;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes wallNode {
+  0% {
+    transform: scale(0.9);
+    background-color: lightgray;
+  }
+  50% {
+    transform: scale(1.25);
+    background-color: gray;
+  }
+  100% {
+    transform: scale(1);
+    background-color: black;
+  }
+}
+
+.node-goblin {
+  background-image: url("../../logos/goblin.png");
+  background-size: 100% 100%;
+}
+.node-ogre {
+  background-image: url("../../logos/ogre.png");
+  background-size: 100% 100%;
+}
+
+.node-witch {
+  background-image: url("../../logos/witch.png");
+  background-size: contain;
+}
+
+.node-bear {
+  background-image: url("../../logos/bear.png");
+  background-size: contain;
+}
+
+.node-dragon {
+  background-image: url("../../logos/dragon.png");
+  background-size: contain;
+}
+
+@keyframes visitedGoblin {
+  0% {
+    transform: scale(0.5);
+    background-image: linear-gradient(to right, lightblue, lightblue),
+      url("../../logos/goblin.png");
+    background-size: contain, 100% 100%;
+    border-radius: 100%;
+  }
+  25% {
+    background-image: linear-gradient(
+        to right,
+        rgb(85, 175, 175),
+        rgb(85, 175, 175)
+      ),
+      url("../../logos/goblin.png");
+    background-size: contain, 100% 100%;
+  }
+  50% {
+    transform: scale(1.25);
+    background-image: linear-gradient(to right, lightskyblue, lightskyblue),
+      url("../../logos/goblin.png");
+    background-size: contain, 100% 100%;
+  }
+  75% {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 128, 128, 0.5),
+        rgba(0, 128, 128, 0.5)
+      ),
+      url("../../logos/goblin.png");
+    background-size: contain, 100% 100%;
+  }
+  100% {
+    transform: scale(1);
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 128, 0.7),
+        rgba(0, 0, 128, 0.7)
+      ),
+      url("../../logos/goblin.png");
+    background-size: contain, 100% 100%;
+  }
+}
+
+@keyframes visitedOgre {
+  0% {
+    transform: scale(0.5);
+    background-image: linear-gradient(to right, lightblue, lightblue),
+      url("../../logos/ogre.png");
+    background-size: contain, 100% 100%;
+    border-radius: 100%;
+  }
+  25% {
+    background-image: linear-gradient(
+        to right,
+        rgb(85, 175, 175),
+        rgb(85, 175, 175)
+      ),
+      url("../../logos/ogre.png");
+    background-size: contain, 100% 100%;
+  }
+  50% {
+    transform: scale(1.25);
+    background-image: linear-gradient(to right, lightskyblue, lightskyblue),
+      url("../../logos/ogre.png");
+    background-size: contain, 100% 100%;
+  }
+  75% {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 128, 128, 0.5),
+        rgba(0, 128, 128, 0.5)
+      ),
+      url("../../logos/ogre.png");
+    background-size: contain, 100% 100%;
+  }
+  100% {
+    transform: scale(1);
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 128, 0.7),
+        rgba(0, 0, 128, 0.7)
+      ),
+      url("../../logos/ogre.png");
+    background-size: contain, 100% 100%;
+  }
+}
+
+@keyframes visitedWitch {
+  0% {
+    transform: scale(0.5);
+    background-image: linear-gradient(to right, lightblue, lightblue),
+      url("../../logos/witch.png");
+    background-size: contain, 100% 100%;
+    border-radius: 100%;
+  }
+  25% {
+    background-image: linear-gradient(
+        to right,
+        rgb(85, 175, 175),
+        rgb(85, 175, 175)
+      ),
+      url("../../logos/witch.png");
+    background-size: contain, 100% 100%;
+  }
+  50% {
+    transform: scale(1.25);
+    background-image: linear-gradient(to right, lightskyblue, lightskyblue),
+      url("../../logos/witch.png");
+    background-size: contain, 100% 100%;
+  }
+  75% {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 128, 128, 0.5),
+        rgba(0, 128, 128, 0.5)
+      ),
+      url("../../logos/witch.png");
+    background-size: contain, 100% 100%;
+  }
+  100% {
+    transform: scale(1);
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 128, 0.7),
+        rgba(0, 0, 128, 0.7)
+      ),
+      url("../../logos/witch.png");
+    background-size: contain, 100% 100%;
+  }
+}
+
+@keyframes visitedBear {
+  0% {
+    transform: scale(0.5);
+    background-image: linear-gradient(to right, lightblue, lightblue),
+      url("../../logos/bear.png");
+    background-size: contain, 100% 100%;
+    border-radius: 100%;
+  }
+  25% {
+    background-image: linear-gradient(
+        to right,
+        rgb(85, 175, 175),
+        rgb(85, 175, 175)
+      ),
+      url("../../logos/bear.png");
+    background-size: contain, 100% 100%;
+  }
+  50% {
+    transform: scale(1.25);
+    background-image: linear-gradient(to right, lightskyblue, lightskyblue),
+      url("../../logos/bear.png");
+    background-size: contain, 100% 100%;
+  }
+  75% {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 128, 128, 0.5),
+        rgba(0, 128, 128, 0.5)
+      ),
+      url("../../logos/bear.png");
+    background-size: contain, 100% 100%;
+  }
+  100% {
+    transform: scale(1);
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 128, 0.7),
+        rgba(0, 0, 128, 0.7)
+      ),
+      url("../../logos/bear.png");
+    background-size: contain, 100% 100%;
+  }
+}
+
+@keyframes visitedDragon {
+  0% {
+    transform: scale(0.5);
+    background-image: linear-gradient(to right, lightblue, lightblue),
+      url("../../logos/dragon.png");
+    background-size: contain, 100% 100%;
+    border-radius: 100%;
+  }
+  25% {
+    background-image: linear-gradient(
+        to right,
+        rgb(85, 175, 175),
+        rgb(85, 175, 175)
+      ),
+      url("../../logos/dragon.png");
+    background-size: contain, 100% 100%;
+  }
+  50% {
+    transform: scale(1.25);
+    background-image: linear-gradient(to right, lightskyblue, lightskyblue),
+      url("../../logos/dragon.png");
+    background-size: contain, 100% 100%;
+  }
+  75% {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 128, 128, 0.5),
+        rgba(0, 128, 128, 0.5)
+      ),
+      url("../../logos/dragon.png");
+    background-size: contain, 100% 100%;
+  }
+  100% {
+    transform: scale(1);
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 128, 0.7),
+        rgba(0, 0, 128, 0.7)
+      ),
+      url("../../logos/dragon.png");
+    background-size: contain, 100% 100%;
+  }
+}
+
+.node-goblin-visited {
+  animation-name: visitedGoblin;
+  animation-duration: 1.25s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.node-ogre-visited {
+  animation-name: visitedOgre;
+  animation-duration: 1.25s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.node-witch-visited {
+  animation-name: visitedWitch;
+  animation-duration: 1.25s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.node-bear-visited {
+  animation-name: visitedBear;
+  animation-duration: 1.25s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.node-dragon-visited {
+  animation-name: visitedDragon;
+  animation-duration: 1.25s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}

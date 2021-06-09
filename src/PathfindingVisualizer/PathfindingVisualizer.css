@@ -1,86 +1,85 @@
 .grid {
-  background-color: azure;
+  background-color:azure;
   display: inline-block;
   font-size: 0;
 }
 
-ul {
+.navbar-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   list-style-type: none;
-  margin: auto;
-  padding: 3px 3px;
-  overflow: hidden;
+  margin: 0;
+  padding-bottom: 1vh;
   background-color: #255d83;
+  align-items: center;
+  justify-content: center;
 }
 
+.navbar-container-col{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  list-style-type: none;
+  margin: auto;
+  background-color: #255d83;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-container div{
+  padding: 10px 10px;
+}
+
+
 li {
+  list-style-type: none;
+  margin: 0 0.2vw;
   float: left;
 }
 
-li a,
-.dropbtn {
+li a {
   display: inline-block;
   background-color: #735983;
-  margin: 2px;
   border-radius: 8px;
   color: white;
+  padding: 0 1vw;
   text-align: center;
-  font-size: 14px;
-  padding: 16px 16px;
-  width: 170px;
   text-decoration: none;
 }
 
+
 li .dropbtn-med {
-  display: inline-block;
+  flex:3;
+  height: 7.5vh;
+  line-height: 7.5vh;
   background-color: #735983;
-  margin: 2px;
   border-radius: 8px;
   color: white;
   text-align: center;
-  font-size: 14px;
-  padding: 16px 16px;
-  width: 120px;
   text-decoration: none;
 }
 
 li .dropbtn-sml {
-  display: inline-block;
+  flex:2;
+  height: 7.5vh;
+  line-height: 7.5vh;
   background-color: #735983;
-  margin: 2px;
   border-radius: 8px;
   color: white;
   text-align: center;
-  font-size: 14px;
-  padding: 16px 16px;
-  width: 65px;
   text-decoration: none;
 }
 
-li button {
-  display: inline-block;
-  border: none;
-  color: white;
-  background-color: #735983;
-  margin: 2px;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 14px;
-  width: 300px;
-  padding: 16px 16px;
-  text-decoration: none;
-}
 
 li .smlbtn {
-  display: inline-block;
-  border: none;
+  flex:3;
+  height: 7.5vh;  
+  line-height: 7.5vh;
   color: white;
   background-color: #735983;
-  margin: 2px;
   border-radius: 8px;
   text-align: center;
-  font-size: 14px;
-  width: 100px;
-  padding: 16px 16px;
   text-decoration: none;
 }
 
@@ -96,7 +95,7 @@ li a:hover,
   cursor: pointer;
 }
 
-li.dropdown {
+li .dropdown {
   display: inline-block;
 }
 
@@ -106,7 +105,6 @@ li.dropdown {
   position: absolute;
   background-color: #f9f9f9;
   color: white;
-  width: 50px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }

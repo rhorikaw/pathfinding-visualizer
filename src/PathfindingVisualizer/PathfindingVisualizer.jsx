@@ -24,13 +24,14 @@ const weightDictionary = {
   dragon: 25,
 };
 
+
 var START_NODE_ROW = 12;
 var START_NODE_COL = 5;
 var FINISH_NODE_ROW = 12;
 var FINISH_NODE_COL = 39;
 
-const GRID_ROW_NUM = 25;
-const GRID_COL_NUM = 45;
+var GRID_ROW_NUM = 25;
+var GRID_COL_NUM = 45;
 
 export default class PathfindingVisualizer extends Component {
   constructor() {
@@ -48,6 +49,8 @@ export default class PathfindingVisualizer extends Component {
       speed: 1,
       visitedNodes: 0,
       totalCost: 0,
+      height: 0,
+      width: 0
     };
   }
 
@@ -59,6 +62,9 @@ export default class PathfindingVisualizer extends Component {
     if (algorithmName !== "greedy" && algorithmName !== "a*") {
       disableListElementButton("manhattan");
       disableListElementButton("euclidean");
+      this.setState({
+        heuristic: null,
+      })
     } else {
       enableListElementButton("manhattan");
       enableListElementButton("euclidean");
@@ -181,6 +187,8 @@ export default class PathfindingVisualizer extends Component {
     }
     this.setState({ mouseIsPressed: false });
   }
+
+
 
   clearBoard() {
     const { grid } = this.state;
@@ -416,9 +424,9 @@ export default class PathfindingVisualizer extends Component {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <ul>
-          <li style={{ marginLeft: "95px" }} className="dropdown">
-            <a className="dropbtn" data-toggle="dropdown-content">
+        <div className="navbar-container">
+          <li className="dropdown">
+            <a className="dropbtn-med" data-toggle="dropdown-content">
               {getAlgorithmButtonContent(this.state.algorithm)}{" "}
               <i className="fa fa-caret-down"></i>
             </a>
@@ -565,7 +573,7 @@ export default class PathfindingVisualizer extends Component {
               <a onClick={() => this.setSpeed(4)}>Rapid (4.0x)</a>
             </div>
           </li>
-          <li style={{ float: "right", marginRight: "120px" }}>
+          <li>
             <a
               className="smlbtn"
               onClick={() => this.clearBoard()}
@@ -576,7 +584,7 @@ export default class PathfindingVisualizer extends Component {
               Clear Board
             </a>
           </li>
-          <li style={{ float: "right" }}>
+          <li>
             <a
               className="smlbtn"
               onClick={() => this.resetBoard()}
@@ -587,8 +595,9 @@ export default class PathfindingVisualizer extends Component {
               Reset Board
             </a>
           </li>
-          <li style={{ float: "right" }}>
-            <button
+          <li>
+            <a
+              className="smlbtn"
               onClick={() =>
                 this.visualizeAlgorithm(
                   this.state.algorithm,
@@ -603,10 +612,9 @@ export default class PathfindingVisualizer extends Component {
                 this.state.algorithm,
                 this.state.heuristic
               )}
-            </button>
+            </a>
           </li>
-        </ul>
-
+        </div>
         <br></br>
         <h3 style={{ padding: "0", margin: "0" }} id="analytics">
           {getAnalyticsContent(this.state.visitedNodes, this.state.totalCost)}

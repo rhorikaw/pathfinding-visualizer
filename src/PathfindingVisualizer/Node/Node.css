@@ -1,9 +1,10 @@
 .node {
-  width: 27.5px;
-  height: 27.5px;
+  width: 1.5vw;
+  height: 3.5vh;
   outline: 0.5px solid grey;
   display: inline-block;
 }
+
 
 .node-visited {
   animation-name: visitedNode;

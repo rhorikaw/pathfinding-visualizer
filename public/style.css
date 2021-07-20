@@ -87,7 +87,14 @@ help:hover {
   padding: 20px;
   border: 1px solid #888;
   width: 960px;
-  height: 560px;
+  height: 600px;
+}
+
+.modal-nonbutton{
+  background-color: #fff0e8;
+  padding: 20px;
+  width: 920px;
+  height: 540px;
 }
 
 .modal nextbutton {
@@ -96,7 +103,7 @@ help:hover {
   position: relative;
   padding-top: 6px;
   float: right;
-  margin: auto;
+  margin-bottom:0px;
   width: 70px;
   height: 25px;
   border: none;
@@ -110,7 +117,7 @@ help:hover {
   position: relative;
   padding-top: 6px;
   float: left;
-  margin: auto;
+  margin-bottom: 0px;
   width: 70px;
   height: 25px;
   border: none;

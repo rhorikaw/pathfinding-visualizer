@@ -62,26 +62,28 @@
         <span class="close" onClick="closeModal('helpModal')">
           &times;
         </span>
-        <h2>Welcome to the Pathfinding Visualizer!</h2>
-        <img src="https://bodyulcg.com/wp-content/uploads/path-finding-visualizer.jpg" alt="pathfinding"
-          style="display: block; margin-left: auto; margin-right: auto;" width="385" height="222"></img>
-        <h3>What is a pathfinding algorithm?</h3>
-        <h4>
-          Essentially, a pathfinding algorithm attempts to find the
-          "shortest" path, or the path with the lowest cost between two
-          nodes on a graph. These algorithms play a vital part in modern
-          technology, as they are integrated in common applications such as
-          online map services and satellite navigation systems. Read more
-          about pathfinding algorithms and graphs
-          <a href="https://medium.com/swlh/pathfinding-algorithms-6c0d4febe8fd" target="_blank">here</a>.
-        </h4>
-        <h4>
-          This application was made to demonstrate how each algorithm works
-          and performs. As a disclaimer, the cost of moving from one node to
-          the next is one, and algorithms will prioritize a straight path
-          over a path with many turns if it has the same cost. Take a look
-          at all of the available algorithms in the next slide.
-        </h4>
+        <div class="modal-nonbutton">
+          <h2>Welcome to the Pathfinding Visualizer!</h2>
+          <img src="https://bodyulcg.com/wp-content/uploads/path-finding-visualizer.jpg" alt="pathfinding"
+            style="display: block; margin-left: auto; margin-right: auto;" width="385" height="222"></img>
+          <h3>What is a pathfinding algorithm?</h3>
+          <h4>
+            Essentially, a pathfinding algorithm attempts to find the
+            "shortest" path, or the path with the lowest cost between two
+            nodes on a graph. These algorithms play a vital part in modern
+            technology, as they are integrated in common applications such as
+            online map services and satellite navigation systems. Read more
+            about pathfinding algorithms and graphs
+            <a href="https://medium.com/swlh/pathfinding-algorithms-6c0d4febe8fd" target="_blank">here</a>.
+          </h4>
+          <h4>
+            This application was made to demonstrate how each algorithm works
+            and performs. As a disclaimer, the cost of moving from one node to
+            the next is one, and algorithms will prioritize a straight path
+            over a path with many turns if it has the same cost. Take a look
+            at all of the available algorithms in the next slide.
+          </h4>
+        </div>
         <nextbutton onClick="transitionModal('helpModal', 'algorithmModal')">Next</nextbutton>
       </div>
     </div>
@@ -90,66 +92,68 @@
         <span class="close" onClick="closeModal('algorithmModal')">
           &times;
         </span>
-        <h2>The Pathfinding Algorithms and Heuristics</h2>
-        <h3>A quick description of each algorithm</h3>
-        <p>
-          <b>Dijkstra's Algorithm:</b> One of the most popular pathfinding
-          algorithms. It considers weights of each visited node and
-          guarantees the shortest path.
-        </p>
-        <p>
-          <b>A* Pathfinding Algorithm:</b> This is the best pathfinding
-          algorithm that utilizes the cost of the path so far <em>g(n)</em>{" "}
-          and the estimate from the heuristic function <em>h(n)</em>. It
-          considers weights of each visited node and dguarantees the
-          shortest path.
-        </p>
-        <p>
-          <b>Greedy Best First Search:</b> This algorithm utilizes a
-          heuristic function <em>h(n)</em> to determine the next node to
-          explore. It considers thee weights of each visited node but it
-          does not guarantee an optimal solution.
-        </p>
-        <p>
-          <b>Breadth First Search:</b> This algorithm searches all of the
-          nodes in the same depth before proceeding to the next depth level.
-          This algorithm does <b>NOT</b> consider the weights of nodes, but
-          will guarantee the shortest path.
-        </p>
-        <p>
-          <b>Bidirectional Breadth First Search:</b> This algorithm is
-          essentially the same as breadth first search. However, instead of
-          beginning the search at the start node, it begins the search at
-          both the start <b>and</b> finish nodes.
-        </p>
-        <p>
-          <b>Depth First Search:</b> This algorithm is one of the worst
-          pathfinding algorithms. It attempts to visit the "deepest" nodes
-          first and backtracks once no other nodes can be visited. This
-          algorithm does <b>NOT</b> consider the weights of the nodes and it
-          does <b>NOT</b> guarantee the shortest path.
-        </p>
-        <h3>A quick description of each heuristic</h3>
-        <p>
-          <b>Manhattan Distance:</b> Uses the formula, d = |x<sub>1</sub> -
-          x<sub>2</sub>| + |y<sub>1</sub> - y<sub>2</sub>| to give an
-          estimate cost.
-        </p>
-        <p>
-          <b>Euclidean Distance</b> Uses the formula, d =
-          <span>
-            &#8730;
-            <span style="
-                  border-top: solid 1px black;
-                  display: inline-block;
-                  line-height: 12.5px
-                ">
-              (x<sub>1</sub> - x<sub>2</sub>)<sup>2</sup> + (y
-              <sub>1</sub> - y<sub>2</sub>)<sup>2</sup>
+        <div class="modal-nonbutton">
+          <h2>The Pathfinding Algorithms and Heuristics</h2>
+          <h3>A quick description of each algorithm</h3>
+          <p>
+            <b>Dijkstra's Algorithm:</b> One of the most popular pathfinding
+            algorithms. It considers weights of each visited node and
+            guarantees the shortest path.
+          </p>
+          <p>
+            <b>A* Pathfinding Algorithm:</b> This is the best pathfinding
+            algorithm that utilizes the cost of the path so far <em>g(n)</em>{" "}
+            and the estimate from the heuristic function <em>h(n)</em>. It
+            considers weights of each visited node and dguarantees the
+            shortest path.
+          </p>
+          <p>
+            <b>Greedy Best First Search:</b> This algorithm utilizes a
+            heuristic function <em>h(n)</em> to determine the next node to
+            explore. It considers thee weights of each visited node but it
+            does not guarantee an optimal solution.
+          </p>
+          <p>
+            <b>Breadth First Search:</b> This algorithm searches all of the
+            nodes in the same depth before proceeding to the next depth level.
+            This algorithm does <b>NOT</b> consider the weights of nodes, but
+            will guarantee the shortest path.
+          </p>
+          <p>
+            <b>Bidirectional Breadth First Search:</b> This algorithm is
+            essentially the same as breadth first search. However, instead of
+            beginning the search at the start node, it begins the search at
+            both the start <b>and</b> finish nodes.
+          </p>
+          <p>
+            <b>Depth First Search:</b> This algorithm is one of the worst
+            pathfinding algorithms. It attempts to visit the "deepest" nodes
+            first and backtracks once no other nodes can be visited. This
+            algorithm does <b>NOT</b> consider the weights of the nodes and it
+            does <b>NOT</b> guarantee the shortest path.
+          </p>
+          <h3>A quick description of each heuristic</h3>
+          <p>
+            <b>Manhattan Distance:</b> Uses the formula, d = |x<sub>1</sub> -
+            x<sub>2</sub>| + |y<sub>1</sub> - y<sub>2</sub>| to give an
+            estimate cost.
+          </p>
+          <p>
+            <b>Euclidean Distance</b> Uses the formula, d =
+            <span>
+              &#8730;
+              <span style="
+                    border-top: solid 1px black;
+                    display: inline-block;
+                    line-height: 12.5px
+                  ">
+                (x<sub>1</sub> - x<sub>2</sub>)<sup>2</sup> + (y
+                <sub>1</sub> - y<sub>2</sub>)<sup>2</sup>
+              </span>
             </span>
-          </span>
-          to give an estimate cost.
-        </p>
+            to give an estimate cost.
+          </p>
+        </div>
         <prevbutton onClick="transitionModal('algorithmModal', 'helpModal')">
           Previous
         </prevbutton>
@@ -163,43 +167,45 @@
         <span class="close" onClick="closeModal('obstacleModal')">
           &times;
         </span>
-        <h2>Modifying the Grid</h2>
-        <h4>
-          Besides changing the algorithms and heuristics, it is also
-          possible to add obstacles to the grid. Obstacles will effectively
-          increase the cost of the node and may cause the algorithm to take
-          a different path. To add obstacles, simply select one on the
-          navbar and left-click on the desired node, or left-click and drag
-          the mouse across the desired nodes. For reference;
-        </h4>
-        <h4>
-          <b>Blank nodes</b> have a cost of 1
-        </h4>
-        <h4>
-          <b>Goblins</b> have a cost of 2
-        </h4>
-        <h4>
-          <b>Ogres</b> have a cost of 5
-        </h4>
-        <h4>
-          <b>Witches</b> have a cost of 10
-        </h4>
-        <h4>
-          <b>Bears</b> have a cost of 15
-        </h4>
-        <h4>
-          <b>Dragons</b> have a cost of 25
-        </h4>
-        <h4 style="margin-bottom: 62px">
-          On top of manually adding obstacles, there are a few mazes and
-          patterns that can be automatically generated. To add one to the
-          grid, simply select one from the menu bar and it will be generated
-          promptly. If needed, the simulation speed can also be modified in
-          a similar fashion.
-          Lastly, it is possible to change the location of the start and end
-          nodes. To do so, simply click, hold, and drag the terminal nodes
-          to the desired location.
-        </h4>
+        <div class="modal-nonbutton">
+          <h2>Modifying the Grid</h2>
+          <h4>
+            Besides changing the algorithms and heuristics, it is also
+            possible to add obstacles to the grid. Obstacles will effectively
+            increase the cost of the node and may cause the algorithm to take
+            a different path. To add obstacles, simply select one on the
+            navbar and left-click on the desired node, or left-click and drag
+            the mouse across the desired nodes. For reference;
+          </h4>
+          <h4>
+            <b>Blank nodes</b> have a cost of 1
+          </h4>
+          <h4>
+            <b>Goblins</b> have a cost of 2
+          </h4>
+          <h4>
+            <b>Ogres</b> have a cost of 5
+          </h4>
+          <h4>
+            <b>Witches</b> have a cost of 10
+          </h4>
+          <h4>
+            <b>Bears</b> have a cost of 15
+          </h4>
+          <h4>
+            <b>Dragons</b> have a cost of 25
+          </h4>
+          <h4 style="margin-bottom: 62px">
+            On top of manually adding obstacles, there are a few mazes and
+            patterns that can be automatically generated. To add one to the
+            grid, simply select one from the menu bar and it will be generated
+            promptly. If needed, the simulation speed can also be modified in
+            a similar fashion.
+            Lastly, it is possible to change the location of the start and end
+            nodes. To do so, simply click, hold, and drag the terminal nodes
+            to the desired location.
+          </h4>
+        </div>
         <prevbutton onClick="transitionModal('obstacleModal', 'algorithmModal')">
           Previous
         </prevbutton>
@@ -211,14 +217,16 @@
         <span class="close" onClick="closeModal('finalModal')">
           &times;
         </span>
-        <h2 style="margin-top: 150px">That's All Folks!</h2>
-        <h3>
-          This concludes the tutorial for my pathfinding visualizer.
-        </h3>
-        <h3 style="font-size: 1.2em"> Have fun playing around with all of the different algorithms!
-        </h3>
-        <p style="text-align: center; margin-bottom: 217px">The source code for this visualizer can be found on my <a
-            href="https://github.com/rhorikaw/pathfinding-visualizer" target="_blank">github</a>.</p>
+        <div class="modal-nonbutton">
+          <h2 style="margin-top: 150px">That's All Folks!</h2>
+          <h3>
+            This concludes the tutorial for my pathfinding visualizer.
+          </h3>
+          <h3 style="font-size: 1.2em"> Have fun playing around with all of the different algorithms!
+          </h3>
+          <p style="text-align: center; margin-bottom: 217px">The source code for this visualizer can be found on my <a
+              href="https://github.com/rhorikaw/pathfinding-visualizer" target="_blank">github</a>.</p>
+        </div>
         <prevbutton onClick="transitionModal('finalModal', 'obstacleModal')">
           Previous
         </prevbutton>
